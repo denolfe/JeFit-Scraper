@@ -67,5 +67,10 @@ Log created: 2013-06-19
                 Set 3, Reps: 8, Lbs: 25
 ```
 
+## To Do
 
+- Add tests to verify functionality
+- Add ability to scrape public profiles without entering credentials
+- CSV output
+- Thor Toolkit?
 
