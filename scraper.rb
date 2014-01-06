@@ -55,8 +55,7 @@ class Scraper
 					log_date = /\d+-\d+-\d+/.match(link)
 					log = Log.new(log_date, link.to_s)
 					@page = @agent.get log.link
-					# puts page.parser.css('div#workout-logs .dahsed-bottom-row')
-					entries = @page.parser.css('div#workout-logs .dahsed-bottom-row') #page.parser.css('div#workout-logs .dahsed-bottom-row a')
+					entries = @page.parser.css('div#workout-logs .dahsed-bottom-row')
 					entries.each_with_index do |entry, index|
 						exercise_name = entry.at_css('a').text.strip
 						rep_string = entry.css('div')[3].text

@@ -10,7 +10,7 @@ class Log
 		@entries = []
 		@db = SQLite3::Database.new( "workout.sqlite3" )
 		init_db()
-		puts "\nLog created: " << date.to_s # << ', ' << link.to_s
+		puts "\nLog created: " << date.to_s
 	end
 
 	def process_exercise(exercise_name, rep_string)
