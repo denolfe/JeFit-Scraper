@@ -6,10 +6,8 @@ class Log
 	def initialize(date, link)
 		@date = date
 		@link = link
-		@data = ''
-		@entries = []
 		@db = SQLite3::Database.new( "workout.sqlite3" )
-		init_db()
+		init_db
 		puts "\nLog created: " << date.to_s
 	end
 
